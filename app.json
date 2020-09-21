@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/message/index",
+    "pages/shop_cart/index",
+    "pages/mine/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FA6D5F",
+    "navigationBarTitleText": "小陶有品",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#828282",
+    "selectedColor":"#FF9C93",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"./static/index.png",
+      "selectedIconPath":"./static/index_selected.png"
+    }, {
+      "pagePath": "pages/classify/index",
+      "text": "分类",
+      "iconPath":"./static/classify.png",
+      "selectedIconPath":"./static/classify_selected.png"
+    },{
+      "pagePath": "pages/message/index",
+      "text": "消息",
+      "iconPath":"./static/message.png",
+      "selectedIconPath":"./static/message_selected.png"
+    },{
+      "pagePath": "pages/shop_cart/index",
+      "text": "购物车",
+      "iconPath":"./static/shop_cart.png",
+      "selectedIconPath":"./static/shop_cart_selected.png"
+    },{
+      "pagePath": "pages/mine/index",
+      "text": "我的",
+      "iconPath":"./static/mine.png",
+      "selectedIconPath":"./static/mine_selected.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

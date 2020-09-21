@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tabs">
+    <mp-tabs 
+    tabs="{{tabs}}" 
+    activeTab="{{activeTab}}" 
+    swiperClass="weui-tabs-swiper"
+    bindtabclick="onTabClick"
+    bindchange="onChange"
+    activeClass="tab-bar-title__selected"
+    
+  >
+  </mp-tabs>
+  </view>
+</view>
