@@ -17,20 +17,23 @@ Page({
   onLoad() {
     const tabs = [
       {
-        title: '技术开发'
+        title: '精选推荐'
       },
       {
-        title: '产品解析'
+        title: '热卖推荐'
       },
       {
-        title: '运营规范'
+        title: '美容护肤'
       },
       {
-        title: '营销经验'
+        title: '个人护理'
       },
       {
-        title: '高校大赛'
+        title: '美食饮品'
       },
+      {
+        title: '牙齿美白'
+      }
     ]
     this.setData({ tabs })
   },
