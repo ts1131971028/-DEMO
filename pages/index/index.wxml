@@ -1,15 +1,9 @@
 <!--index.wxml-->
 <view class="page">
-  <mp-tabs 
-  tabs="{{tabs}}" 
-  activeTab="{{activeTab}}" 
-  swiperClass="weui-tabs-swiper"
-  bindtabclick="onTabCLick"
-  bindchange="onChange"
-  activeClass="tab-bar-title__selected"
->
-  <block wx:for="{{tabs}}" wx:key="title">
-    <view class="tab-content" slot="tab-content-{{index}}" > {{item.title}} </view>
-  </block>
-</mp-tabs>
+  <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabCLick"
+    bindchange="onChange" activeClass="tab-bar-title__selected">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content" slot="tab-content-{{index}}"> {{item.title}} </view>
+    </block>
+  </mp-tabs>
 </view>
