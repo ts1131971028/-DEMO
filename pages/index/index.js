@@ -2,6 +2,9 @@ Page({
   data: {
     tabs: [],
     activeTab: 0,
+    seckill_hour: 1,
+    seckill_minute: 59,
+    seckill_second: 59
   },
 
   onLoad() {

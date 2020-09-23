@@ -2,8 +2,55 @@
 <view class="page">
   <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabCLick"
     bindchange="onChange" activeClass="tab-bar-title__selected">
-    <block wx:for="{{tabs}}" wx:key="title">
-      <view class="tab-content" slot="tab-content-{{index}}"> {{item.title}} </view>
+    <block class="tab-block" wx:for="{{tabs}}" wx:key="title">
+      <view wx:if="{{item.title == '首页'}}" class="tab-content" slot="tab-content-{{index}}">
+        <image class="index_banner" style="width: 100%" mode="scaleToFill" src="/static/banner.png"></image>
+        <view class="index_list">
+          <view class="index_list_header">
+            <view class="index_list_header_item_1">
+              <image class="index_list_header_item_image" mode="scaleToFill" src="/static/index_list/sign_in.png"></image>
+            </view>
+            <view class="index_list_header_item_2">
+              <image class="index_list_header_item_image" mode="scaleToFill" src="/static/index_list/special_offer.png"></image>
+            </view>
+            <view class="index_list_header_item_3">
+              <image class="index_list_header_item_image" mode="scaleToFill" src="/static/index_list/exemption_from_postage.png"></image>
+            </view>
+            <view class="index_list_header_item_4">
+              <image class="index_list_header_item_image" mode="scaleToFill" src="/static/index_list/promotion.png"></image>
+            </view>
+            <view class="index_list_header_item_5">
+              <image class="index_list_header_item_image" mode="scaleToFill" src="/static/index_list/new_gift_bag.png"></image>
+            </view>
+          </view>
+          <view class="index_list_foot">
+            <view class="index_list_foot_left">
+              <image class="index_list_foot_left_image" mode="scaleToFill" src="/static/index_list/first.png"></image>
+            </view>
+            <view class="index_list_foot_right">
+              <view class="index_list_foot_right_1">热门推荐</view>
+              <view class="index_list_foot_right_2">购物节来啦，1秒领取好礼...</view>
+            </view>
+          </view>
+        
+        
+        
+        </view>
+        <view class="seckill">
+          <view class="seckill_header">
+            <view class="seckill_header_left">
+              <view class="seckill_header_left_1">限时秒杀</view>
+              <view class="seckill_header_left_2">0{{seckill_hour}}</view>:
+              <view class="seckill_header_left_3">{{seckill_minute}}</view>:
+              <view class="seckill_header_left_4">{{seckill_second}}</view>
+            </view>
+            <view class="seckill_header_right">
+              更多＞
+            </view>
+          </view>
+          <view class="seckill_content"></view>
+        </view>
+      </view>
     </block>
   </mp-tabs>
 </view>
