@@ -4,7 +4,7 @@
     bindchange="onChange" activeClass="tab-bar-title__selected">
     <block class="tab-block" wx:for="{{tabs}}" wx:key="title">
       <view wx:if="{{item.title == '首页'}}" class="tab-content" slot="tab-content-{{index}}">
-        <image class="index_banner" style="width: 100%" mode="scaleToFill" src="/static/banner.png"></image>
+        <image class="index_banner" style="width: 100%" mode="scaleToFill" src="/static/banner.png" bindtap="goToGoods"></image>
         <view class="index_list">
           <view class="index_list_header">
             <view class="index_list_header_item_1">
