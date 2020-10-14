@@ -1,13 +1,10 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="page">
+  <mp-vtabs vtabs="{{vtabs}}" activeTab="{{activeTab}}" bindtabclick="onTabCLick" bindchange="onChange">
+    <block wx:for="{{vtabs}}" wx:key="title">
+      <mp-vtabs-content tabIndex="{{index}}">
+        <view class="vtabs-content-item">我是第{{index + 1}}项： {{item.title}}</view>
+      </mp-vtabs-content>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  </mp-vtabs>
 </view>

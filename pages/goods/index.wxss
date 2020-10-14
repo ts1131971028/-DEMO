@@ -1,1 +1,130 @@
 /* pages/goods/index.wxss */
+.page {
+  background-color: grey;
+  position: relative;
+}
+
+.goods_nav {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.goods_nav_top {
+  width: 100%;
+  height: 90rpx;
+  flex: 6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.goods_nav_top_goods {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_nav_top_comment {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_nav_top_particulars {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_nav_top_recommend {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_nav_bottom {
+  width: 100%;
+  height: 10rpx;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.goods_nav_top_goods_underline {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_nav_top_comment_underline {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_nav_top_particulars_underline {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_nav_top_recommend_underline {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline {
+  width: 50rpx;
+  height: 5rpx;
+}
+.underline_color {
+  background-color: rgb(255, 160, 36);
+}
+
+
+.content {
+  height: 2000rpx;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  z-index: 1;
+}
+
+/* 轮播图 */
+swiper {
+  height: 700rpx;
+  width: 100%;
+}
+swiper-item {
+  height: 100%;
+  width: 100%;
+}
+.slide-image{
+   height: 100%;
+  width: 100%;
+}

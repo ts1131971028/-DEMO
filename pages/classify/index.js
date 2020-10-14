@@ -1,54 +1,30 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    vtabs: [],
+    activeTab: 0,
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+
+  onLoad() {
+    const titles = ['热搜推荐', '手机数码', '家用电器',
+      '生鲜果蔬', '酒水饮料', '生活美食', 
+      '美妆护肤', '个护清洁', '女装内衣', 
+      '男装内衣', '鞋靴箱包', '运动户外', 
+      '生活充值', '母婴童装', '玩具乐器', 
+      '家居建材', '计生情趣', '医药保健', 
+      '时尚钟表', '珠宝饰品', '礼品鲜花', 
+      '图书音像', '房产', '电脑办公']
+    const vtabs = titles.map(item => ({title: item}))
+    this.setData({vtabs})
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+
+  onTabCLick(e) {
+    const index = e.detail.index
+    console.log('tabClick', index)
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
+  onChange(e) {
+    const index = e.detail.index
+    console.log('change', index)
   }
+
 })

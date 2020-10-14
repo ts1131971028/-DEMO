@@ -1,2 +1,37 @@
 <!--pages/goods/index.wxml-->
-<text>pages/goods/index.wxml</text>
+<view class="page">
+  <view class="goods_nav">
+    <view class="goods_nav_top">
+      <view class="goods_nav_top_goods" bindtap="clickNavGoods">商 品</view>
+      <view class="goods_nav_top_comment" bindtap="clickNavComment">评 价</view>
+      <view class="goods_nav_top_particulars" bindtap="clickNavParticulars">详 情</view>
+      <view class="goods_nav_top_recommend" bindtap="clickNavRecommend">推 荐</view>
+    </view>
+    <view class="goods_nav_bottom">
+      <view class="goods_nav_top_goods_underline">
+        <view class="underline {{isActiveGoods}}"></view>
+      </view>
+      <view class="goods_nav_top_comment_underline">
+        <view class="underline {{isActiveComment}}"></view>
+      </view>
+      <view class="goods_nav_top_particulars_underline">
+        <view class="underline {{isActiveParticulars}}"></view>
+      </view>
+      <view class="goods_nav_top_recommend_underline">
+        <view class="underline {{isActiveRecommend}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="goods_image">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+        duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>
